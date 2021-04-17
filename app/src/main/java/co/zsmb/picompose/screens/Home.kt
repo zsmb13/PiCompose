@@ -25,18 +25,19 @@ import kotlinx.coroutines.launch
 
 @Composable
 fun Home(navController: NavController) {
-    Scaffold(
-        topBar = {
-            TopAppBar(
-                title = { Text("Pi") },
-                actions = {
-                    IconButton(onClick = { navController.navigate("highscores") }) {
-                        Icon(Icons.Default.Star, stringResource(R.string.content_description_high_scores))
-                    }
+    Scaffold(topBar = {
+        TopAppBar(
+            title = { Text("Pi") },
+            actions = {
+                IconButton(onClick = { navController.navigate("highscores") }) {
+                    Icon(
+                        Icons.Default.Star,
+                        stringResource(R.string.content_description_high_scores)
+                    )
                 }
-            )
-        }
-    ) {
+            }
+        )
+    }) {
         PiPad()
     }
 }
@@ -147,7 +148,7 @@ private fun KeyPad(
 private fun NumberButton(
     number: Int,
     onClick: (Char) -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
 ) {
     OutlinedButton(
         onClick = {

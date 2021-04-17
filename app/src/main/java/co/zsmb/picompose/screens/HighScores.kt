@@ -40,7 +40,7 @@ fun HighScores(navController: NavController) {
             Header(Modifier.width(120.dp))
 
             ScoreKeeper.scores.forEachIndexed { index, score ->
-                ScoreItem(index, score, Modifier.width(120.dp))
+                ScoreItem(index + 1, score, Modifier.width(120.dp))
             }
         }
     }
@@ -70,11 +70,11 @@ private fun Header(modifier: Modifier = Modifier) {
 private fun ScoreItem(
     index: Int,
     score: Int,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
 ) {
     Row(modifier) {
         Text(
-            text = "${index + 1}.",
+            text = "${index}.",
             textAlign = TextAlign.Start,
             modifier = Modifier.weight(1f),
         )
