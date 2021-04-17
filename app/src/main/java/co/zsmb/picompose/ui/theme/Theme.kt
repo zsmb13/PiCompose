@@ -7,7 +7,7 @@ import androidx.compose.ui.graphics.Color
 
 @Composable
 fun PiPracticeComposeTheme(
-    content: @Composable() () -> Unit
+    content: @Composable () -> Unit
 ) {
     MaterialTheme(
         colors = lightColors(
@@ -15,8 +15,6 @@ fun PiPracticeComposeTheme(
             primaryVariant = Color(0xFF087F23),
             secondary = Color(0xFF4CAF50),
         ),
-        typography = Typography,
-        shapes = Shapes,
-        content = content
+        content = content,
     )
 }
